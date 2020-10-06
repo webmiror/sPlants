@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/plants"
+            android:icon="@mipmap/ic_leaves_foreground"
+            android:title="@string/menu_plants" />
+        <item
+            android:id="@+id/sicks"
+            android:icon="@mipmap/ic_leaves_foreground"
+            android:title="@string/menu_disease" />
+        <item
+            android:id="@+id/history"
+            android:icon="@mipmap/ic_leaves_foreground"
+            android:title="@string/menu_history" />
+        <item
+            android:id="@+id/primety"
+            android:icon="@mipmap/ic_leaves_foreground"
+            android:title="@string/menu_signs" />
+    </group>
+
+    <item android:title="Разное">
+        <menu>
+            <item
+                android:id="@+id/test"
+                android:icon="@mipmap/ic_leaves_foreground"
+                android:title="@string/menu_test" />
+            <item
+                android:id="@+id/calendar"
+                android:icon="@mipmap/ic_leaves_foreground"
+                android:title="@string/menu_calendar" />
+        </menu>
+    </item>
+
+</menu>

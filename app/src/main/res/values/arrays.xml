@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="plants_list">
+        <item>Авокадо</item>
+        <item>Аглаонема</item>
+        <item>Адениум</item>
+        <item>Адромискус</item>
+        <item>Актинидия китайская / Киви</item>
+        <item>Алоэ</item>
+        <item>Альсобия</item>
+        <item>Ананас</item>
+        <item>Антуриум</item>
+        <item>Астрофитум</item>
+        <item>Аустроцилиндропунция</item>
+        <item>Бальзамин</item>
+        <item>Бегония Бауэра</item>
+        <item>Бегония вечноцветущая</item>
+        <item>Бегония воротничковая</item>
+        <item>Бегония Рекс</item>
+    </string-array>
+
+    <string-array name="disease_list">
+        <item>Щитовка</item>
+        <item>Трипсы</item>
+        <item>Тля</item>
+        <item>Паутинный клещ</item>
+    </string-array>
+</resources>
