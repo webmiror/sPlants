@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ArrayAdapter<String> adapter;
     private DrawerLayout drawer;
     private Toolbar toolbar;
+    int index_category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, Text_Content_Activity.class);
+                intent.putExtra("category", index_category);
+                intent.putExtra("position", position);
                 startActivity(intent);
             }
         });
@@ -103,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
+            index_category = 1;
 
         } else if (id == R.id.sicks) {
             //Toast.makeText(this, "test 2", Toast.LENGTH_SHORT).show();
@@ -111,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
+            index_category = 2;
         }
 
         drawer.closeDrawer(GravityCompat.START);
