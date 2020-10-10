@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        index_category = 0;
         //find listView
         list = findViewById(R.id.listView);
         array = getResources().getStringArray(R.array.plants_list);
@@ -101,24 +101,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.plants) {
             //Toast.makeText(this, "test 1", Toast.LENGTH_SHORT).show();
-            toolbar.setTitle(R.string.menu_plants);
+            /*toolbar.setTitle(R.string.menu_plants);
             array = getResources().getStringArray(R.array.plants_list);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
-            index_category = 1;
+            index_category = 1;*/
+            fillArray(R.string.menu_plants, R.array.plants_list, 1);
 
         } else if (id == R.id.sicks) {
             //Toast.makeText(this, "test 2", Toast.LENGTH_SHORT).show();
-            toolbar.setTitle(R.string.menu_disease);
+            /*toolbar.setTitle(R.string.menu_disease);
             array = getResources().getStringArray(R.array.disease_list);
             adapter.clear();
             adapter.addAll(array);
             adapter.notifyDataSetChanged();
-            index_category = 2;
+            index_category = 2;*/
+            fillArray(R.string.menu_disease, R.array.disease_list, 2);
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void fillArray(int title, int arrayList, int index) {
+        toolbar.setTitle(title);
+        array = getResources().getStringArray(arrayList);
+        adapter.clear();
+        adapter.addAll(array);
+        adapter.notifyDataSetChanged();
+        index_category = index;
     }
 }
